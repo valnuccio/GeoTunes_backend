@@ -1,0 +1,4 @@
+class WelcomeModel < ApplicationController
+
+   
+end

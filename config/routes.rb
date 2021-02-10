@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "welcome#index"
+
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create]
@@ -8,4 +10,6 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
     end
   end
+
+ 
 end
