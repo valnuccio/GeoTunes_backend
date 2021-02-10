@@ -78,8 +78,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: backend_spotifymap_production
+#   username: backend_spotifymap
+#   password: <%= ENV['BACKEND_SPOTIFYMAP_DATABASE_PASSWORD'] %>
+
+
 production:
-  <<: *default
-  database: backend_spotifymap_production
-  username: backend_spotifymap
-  password: <%= ENV['BACKEND_SPOTIFYMAP_DATABASE_PASSWORD'] %>
+<<: *default
+database: db/production.sqlite3
+adapter: postgresql
